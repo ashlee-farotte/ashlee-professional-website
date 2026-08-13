@@ -1,33 +1,34 @@
-# Ashlee Professional Website
+# Ashlee Farotte-Kruchas — Professional Website
 
-This starter website is a simple static site built with HTML and CSS.
+This repository contains the source code for my personal professional website.
 
-## How to preview it
+The site highlights my background in physics and biology, undergraduate research in computational astrophysics and Galactic Archaeology, museum and natural science experience, technical skills, and professional materials.
 
-1. Open the folder.
-2. Double-click `index.html`.
-3. It should open in your normal web browser.
+## Live Website
 
-## Before publishing
+[View the website](https://ashlee-farotte.github.io/ashlee-professional-website/)
 
-Replace the placeholder contact text with:
-- your professional email
-- LinkedIn URL
-- GitHub URL
+## Website Sections
 
-You can also add:
-- your resume PDF
-- your CV PDF
-- a professional photo
-- research plots or project images
-- posters/publications as you build them
+- About
+- Education
+- Research & Interests
+- Featured Research
+- Experience
+- Skills
+- Resume & CV
+- Contact
 
-## Files
+## Technologies Used
 
-- `index.html` — the content and structure of the website
-- `style.css` — the visual design
-- `README.md` — these instructions
+- HTML
+- CSS
+- Git
+- GitHub
+- GitHub Pages
 
-## Publishing
+## About the Project
 
-A convenient free option is GitHub Pages. Once the text and links are finalized, upload these files to a GitHub repository and enable GitHub Pages in the repository settings.
+I created this website as a professional portfolio that I can continue updating as I gain new research experience, complete academic milestones, and work on future scientific projects.
+
+My goal is to present both sides of my interdisciplinary background while keeping the site clear, accessible, and professional.
