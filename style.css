@@ -3,13 +3,19 @@
 }
 
 :root {
-  --bg: #f7f8f6;
+  --bg: #f8f8fb;
   --surface: #ffffff;
-  --text: #17201b;
-  --muted: #5b675f;
-  --accent: #315c49;
-  --accent-soft: #e8efeb;
-  --border: #dce3de;
+  --text: #1f2940;
+  --muted: #667085;
+
+  --accent: #52678f;
+  --accent-soft: #edf0f7;
+
+  --border: #dfe3ec;
+
+  --lavender: #b8a8df;
+  --cream: #fffaf0;
+
   --max: 1120px;
 }
 
@@ -204,7 +210,7 @@ h3 {
 }
 
 .section.alt {
-  background: #eef2ef;
+  background: #f1f3f8;
 }
 
 .two-column {
@@ -390,4 +396,68 @@ footer {
 .contact .button.primary:hover,
 .contact .button.secondary:hover {
   opacity: 0.85;
+}
+
+/* Cursor pixie-dust sparkle effect */
+.mouse-sparkle {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+
+  width: 8px;
+  height: 8px;
+
+  background: #c9b8ff;
+
+  /* Four-point star */
+  clip-path: polygon(
+    50% 0%,
+    60% 40%,
+    100% 50%,
+    60% 60%,
+    50% 100%,
+    40% 60%,
+    0% 50%,
+    40% 40%
+  );
+
+  animation: pixie-sparkle 850ms ease-out forwards;
+}
+
+.mouse-sparkle.cream {
+  background: #fff7e8;
+}
+
+.mouse-sparkle.gold {
+  background: #e6c875;
+}
+
+@keyframes pixie-sparkle {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0) rotate(0deg);
+  }
+
+  20% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1) rotate(15deg);
+  }
+
+  55% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 0;
+    transform:
+      translate(-50%, -20px)
+      scale(0.15)
+      rotate(75deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mouse-sparkle {
+    display: none;
+  }
 }

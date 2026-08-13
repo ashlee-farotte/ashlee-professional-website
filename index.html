@@ -457,5 +457,57 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
+  <script>
+    const reducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    let lastSparkle = 0;
+
+    if (!reducedMotion && window.matchMedia("(pointer: fine)").matches) {
+      document.addEventListener("mousemove", (event) => {
+        const now = Date.now();
+
+        if (now - lastSparkle < 35) return;
+        lastSparkle = now;
+
+        const sparkle = document.createElement("span");
+        sparkle.className = "mouse-sparkle";
+
+        /* Randomly scatter stars around the cursor */
+        const offsetX = (Math.random() - 0.5) * 16;
+        const offsetY = (Math.random() - 0.5) * 16;
+
+        sparkle.style.left = `${event.clientX + offsetX}px`;
+        sparkle.style.top = `${event.clientY + offsetY}px`;
+
+        /* Different star sizes */
+        const size = 4 + Math.random() * 7;
+        sparkle.style.width = `${size}px`;
+        sparkle.style.height = `${size}px`;
+
+        /*
+          Most stars are lavender.
+          Some are cream.
+          A few are gold.
+        */
+        const colorChance = Math.random();
+
+        if (colorChance > 0.88) {
+          sparkle.classList.add("gold");
+        } else if (colorChance > 0.68) {
+          sparkle.classList.add("cream");
+        }
+
+        document.body.appendChild(sparkle);
+
+        setTimeout(() => {
+          sparkle.remove();
+        }, 850);
+      });
+    }
+  </script>
+
 </body>
 </html>
